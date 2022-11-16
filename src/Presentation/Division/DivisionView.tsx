@@ -1,4 +1,4 @@
-import { Division } from "../Domain/Model/Division";
+import { Division } from "../../Domain/Model/Division";
 import { TeamView } from "./TeamView";
 
 interface DivisionProps {
@@ -16,8 +16,10 @@ export default function DivisionView(props: DivisionProps) {
                     <tr className="DivisionHeaders">
                         <th>Rank</th>
                         <th>Team</th>
-                        <th>Points</th>
+                        <th>GP</th>
+                        <th>PTS</th>
                         <th>WLO</th>
+                        <th>STRK</th>
                     </tr>
                 </thead>
                 <tbody>

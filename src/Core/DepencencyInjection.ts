@@ -5,8 +5,10 @@ import StatsDataSource from "../Data/DataSource/StatsDataSource";
 import { StatsRepositoryImpl } from "../Data/Repository/StatsRepositoryImpl";
 import { StatsRepository } from "../Domain/Repository/StatsRepository";
 import { GetDivisionsUseCase } from "../Domain/UseCase/GetDivisions";
+import { GetGamesUseCase } from "../Domain/UseCase/GetGames";
 
-const statsAPIDataSource: StatsDataSource = new StatsAPIDataSourceImpl()
-const statsRepository: StatsRepository = new StatsRepositoryImpl(statsAPIDataSource)
+const statsAPIDataSource: StatsDataSource = new StatsAPIDataSourceImpl();
+const statsRepository: StatsRepository = new StatsRepositoryImpl(statsAPIDataSource);
 
-export const getDivisionsUseCase = new GetDivisionsUseCase(statsRepository)
+export const getDivisionsUseCase = new GetDivisionsUseCase(statsRepository);
+export const getGamesUseCase = new GetGamesUseCase(statsRepository);

@@ -22,5 +22,6 @@ export interface Team {
     leagueHomeRank: number,
     wildCardRank: number,
     row: number,
-    gamesPlayed: number
+    gamesPlayed: number,
+    streakCode: string
 }

@@ -1,3 +1,16 @@
+@font-face {
+  font-family: krinkes;
+  src: url("Presentation/Assets/Fonts/Krinkes/KrinkesRegularPERSONAL.ttf");
+}
+@font-face {
+  font-family: raleway;
+  src: url("Presentation/Assets/Fonts/Raleway/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: megabomb;
+  src: url("Presentation/Assets/Fonts/Megabomb/Megabomb.ttf");
+}
+
 .App {
   position: fixed;
   top: 0;
@@ -7,34 +20,151 @@
   height: 100%;
   width: 100%;
   background-color: black;
+  background-image: url("Presentation/Assets/Images/bg.jpg");
+
   color: white;
   overflow-y: scroll;
 }
 
+#NhlLogo {
+  max-width: 150px;
+  margin: 25px 20px;
+}
+
+.PageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.PageHeader h1 {
+  font-size: 30pt;
+  font-family: megabomb;
+  font-weight: 500;
+  color: #e4e5e6;
+  margin: 0;
+}
+
+.PageHeader h2 {
+  font-size: 15pt;
+  font-family: raleway;
+  font-weight: 600;
+  color: #e4e5e6;
+  margin: 0;
+}
+
+.PageHeader hr {
+  margin: 0;
+}
+
 .DivisionListView {
   margin: auto;
-  width: 50vw;
+  width: 90%;
+  max-width: 850px;
+}
+
+.DivisionView h1 {
+  font-size: 30pt;
+  margin: 0px;
+  padding: 0 0 20px 0;
 }
 
 .DivisionView {
-  margin: 5vw auto;
-  padding: 2vw;
-  background-color: rgb(90, 70, 20);
-  border-radius: 5vw;
+  margin: 25px auto;
+  border-radius: 25px;
   text-align: center;
 
-  color: gold;
+  padding: 50px;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+
+  font-family: krinkes;
 }
 
 .DivisionRankTable {
   position: relative;
-  width: 100%;
   margin: auto auto;
+  width: 100%;
 
-  color: goldenrod;
-  text-align: left;
+  color: white;
+  font-family: raleway;
+  text-align: center;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-bottom: 1px solid rgba(255, 255, 255, .75);
+}
+
+.DivisionRankTable tbody::before, tbody::after {
+  content: '';
+  display: block;
+  height: 10px;
+}
+
+.DivisionRankTable th {
+  padding: 5px;
+}
+
+.DivisionRankTable td {
+  padding: 3px;
+}
+
+.DivisionRankTable thead th {
+  border-bottom: 1px solid rgba(255, 255, 255, .75);
+  padding-bottom: 10px;
+}
+
+.DivisionRankTable thead th:nth-child(2) {
+  width: 30%;
 }
 
 .DivisionHeaders {
-  color: gold;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.GameListView {
+  margin: auto;
+  width: 90%;
+  max-width: 850px;
+  padding: 25px 0px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  text-align: center;
+}
+
+.GameListView h1 {
+  font-size: 30pt;
+  font-family: krinkes;
+  margin-bottom: 0;
+}
+
+.GameListView h2 {
+  font-family: raleway;
+  font-weight: 200;
+  font-size: 15pt;
+  margin-top: 10px;
+}
+
+.GameListGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.GameView {
+  border-radius: 25px;
+  overflow: hidden;
+  
+  width: 25%;
+  max-width: 360px;
+}
+
+.GameView video {
+  width: 100%;
 }

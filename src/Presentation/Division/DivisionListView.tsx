@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { GetDivisionsUseCase } from "../Domain/UseCase/GetDivisions";
+import { GetDivisionsUseCase } from "../../Domain/UseCase/GetDivisions";
 import useViewModel from "./DivisionListViewModel";
-import DivisionView from "./DivisionView";
+import DivisionView from "./DivisionView"
 
 interface DivisionListViewProps {
     getDivisionUseCase: GetDivisionsUseCase
