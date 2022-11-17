@@ -14,16 +14,10 @@ export default function GameListView(props: GamesListViewProps) {
     getGames();
   }, []);
 
-  const today = new Date();
-  console.log(today);
-  const year = today.getFullYear();
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  const day = today.getDate().toString().padStart(2, '0');
-
   return (
     <div className='GameListView'>
       <h1>Highlights4</h1>
-      <h2>{year}-{month}-{day}</h2>
+      <h2>Last night's highlights.</h2>
       <div className='GameListGrid'>
         {
           games.map(

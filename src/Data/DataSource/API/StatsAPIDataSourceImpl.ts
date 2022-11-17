@@ -7,7 +7,6 @@ import { Team } from "../../../Domain/Model/Team";
 import StatsDataSource from "../StatsDataSource";
 import { Game } from "../../../Domain/Model/Game";
 import { GameAPIEntity } from "./Entity/Schedule/GameAPIEntity";
-import { DateAPIEntity } from "./Entity/Schedule/DateAPIEntity";
 import { ScheduleAPIEntity } from "./Entity/Schedule/ScheduleAPIEntity";
 
 async function getRecords(): Promise<RecordAPIEntity[]> {
