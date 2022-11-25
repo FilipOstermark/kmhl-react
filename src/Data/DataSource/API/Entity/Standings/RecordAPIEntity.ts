@@ -1,7 +1,7 @@
-import { DivisionAPIEntity } from "./DivisionAPIEntity"
-import { TeamRecordAPIEntity } from "./TeamRecordAPIEntity"
+import { DivisionAPIEntity } from "./DivisionAPIEntity";
+import { TeamRecordAPIEntity } from "./TeamRecordAPIEntity";
 
 export interface RecordAPIEntity {
-    division: DivisionAPIEntity,
+    division: DivisionAPIEntity
     teamRecords: TeamRecordAPIEntity[]
 }

@@ -1,6 +1,6 @@
 import { TeamAPIEntity } from "./TeamAPIEntity";
 
 export interface GameTeamAPIEntity {
-    score: number;
+    score: number
     team: TeamAPIEntity
 }

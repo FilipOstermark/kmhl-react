@@ -78,7 +78,7 @@
   padding: 50px;
 
   color: white;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
 
   font-family: krinkes;
 }
@@ -136,9 +136,12 @@
   width: 90%;
   max-width: 850px;
   padding: 25px 0px;
-  background: rgba(0, 0, 0, 0.5);
+  
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
+  
   text-align: center;
+  font-family: raleway;
 }
 
 .GameListView h1 {
@@ -164,17 +167,23 @@
 }
 
 .GameView {
-  border-radius: 25px;
-  overflow: hidden;
-  
   width: 25%;
   max-width: 360px;
+
+  padding: .5rem;
+}
+
+
+.HighlightVideo {
+  border-radius: 15px;
+  
+  width: 75%;
 
   transition: width 200ms;
 }
 
-.GameView:hover {
-  width: 30%;
+.HighlightVideo:hover {
+  width: 100%;
   transition: width 200ms;
 }
 

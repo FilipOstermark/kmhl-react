@@ -1,11 +1,12 @@
+import React from "react";
 import { Division } from "../../Domain/Model/Division";
-import { TeamView } from "./TeamView";
+import TeamView from "./TeamView";
 
 interface DivisionProps {
     division: Division
 }
 
-export default function DivisionView(props: DivisionProps) {
+const DivisionView: React.FC<DivisionProps> = (props: DivisionProps) => {
     const { name, teams } = props.division;
 
     return (
@@ -23,9 +24,13 @@ export default function DivisionView(props: DivisionProps) {
                     </tr>
                 </thead>
                 <tbody>
-                    {teams.map((team) => { return (<TeamView key={team.id} team={team} />); })}
+                    {teams.map((team) => {
+                        return (<TeamView key={team.id} team={team} />);
+                    })}
                 </tbody>
             </table>
         </div>
     );
-}
+};
+
+export default DivisionView;

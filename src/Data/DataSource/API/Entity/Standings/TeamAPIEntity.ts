@@ -1,4 +1,5 @@
 export interface TeamAPIEntity {
-    id: number;
-    name: string;
+    id: number
+    name: string
+    nameShort: string
 }

@@ -1,32 +1,37 @@
-import React, { useEffect } from 'react';
-import { GetGamesUseCase } from '../../Domain/UseCase/GetGames';
-import useViewModel from "./GameListViewModel";
-import GameView from './GameView';
+import React, { useEffect } from "react";
+import { Game } from "../../Domain/Model/Game";
+import { GetGamesUseCase } from "../../Domain/UseCase/GetGames";
+import { useViewModel } from "./GameListViewModel";
+import GameView from "./GameView";
 
 interface GamesListViewProps {
-  getGamesUseCase: GetGamesUseCase
+    getGamesUseCase: GetGamesUseCase
 }
 
-export default function GameListView(props: GamesListViewProps) {
-  const { getGames, games } = useViewModel(props.getGamesUseCase);
-  
-  useEffect(() => {
-    getGames();
-  }, []);
+const GameListView: React.FC<GamesListViewProps> = (
+    props: GamesListViewProps
+) => {
+    const { getGames, games } = useViewModel(props.getGamesUseCase);
 
-  return (
-    <div className='GameListView'>
-      <h1>Highlights4</h1>
-      <h2>Last night's highlights.</h2>
-      <div className='GameListGrid'>
-        {
-          games.map(
-            (game) => {
-              return (<GameView key={game.id} game={game} />);
-            }
-          )
-        }
-      </div>
-    </div>
-  );
-}
+    useEffect(() => {
+        getGames().then(() => {}).catch(() => {});
+    }, []);
+
+    return (
+        <div className='GameListView'>
+            <h1>Highlights4</h1>
+            <h2>Last night&apos;s highlights.</h2>
+            <div className='GameListGrid'>
+                {
+                    games.map(
+                        (game: Game) => {
+                            return (<GameView key={game.id} game={game} />);
+                        }
+                    )
+                }
+            </div>
+        </div>
+    );
+};
+
+export default GameListView;

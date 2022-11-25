@@ -9,6 +9,6 @@ export class GetGamesUseCase {
     }
 
     async invoke(): Promise<Game[]> {
-        return this.repository.getGames();
+        return await this.repository.getGames();
     }
 }

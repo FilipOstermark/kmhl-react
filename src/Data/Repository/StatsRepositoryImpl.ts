@@ -1,6 +1,5 @@
-import { Team } from "../../Domain/Model/Team";
 import StatsDataSource from "../DataSource/StatsDataSource";
-import { StatsRepository as StatsRepository } from "../../Domain/Repository/StatsRepository";
+import { StatsRepository } from "../../Domain/Repository/StatsRepository";
 import { Division } from "../../Domain/Model/Division";
 import { Game } from "../../Domain/Model/Game";
 
@@ -12,10 +11,10 @@ export class StatsRepositoryImpl implements StatsRepository {
     }
 
     async getDivisions(): Promise<Division[]> {
-        return this.dataSource.getDivisions();
+        return await this.dataSource.getDivisions();
     }
 
     async getGames(): Promise<Game[]> {
-        return this.dataSource.getGames();
+        return await this.dataSource.getGames();
     }
 }

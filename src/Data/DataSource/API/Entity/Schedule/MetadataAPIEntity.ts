@@ -1,3 +1,3 @@
-export interface MetadataAPIEntity {
-    timeStamp: string;
+export default interface MetadataAPIEntity {
+    timeStamp: string
 }

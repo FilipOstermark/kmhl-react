@@ -21,6 +21,7 @@ function mapTeamRecordAPIEntityToTeam(entity: TeamRecordAPIEntity): Team {
     return {
         id: entity.team.id,
         name: entity.team.name,
+        nameShort: entity.team.nameShort,
         divisionRank: +entity.divisionRank,
         wins: entity.leagueRecord.wins,
         losses: entity.leagueRecord.losses,
@@ -44,7 +45,7 @@ function mapTeamRecordAPIEntityToTeam(entity: TeamRecordAPIEntity): Team {
         row: +entity.row,
         gamesPlayed: +entity.gamesPlayed,
         streakCode: entity.streak.streakCode
-    }
+    };
 }
 
 function mapRecordAPIEntityToDivision(entity: RecordAPIEntity): Division {
@@ -52,7 +53,7 @@ function mapRecordAPIEntityToDivision(entity: RecordAPIEntity): Division {
         id: entity.division.id,
         name: entity.division.name,
         teams: entity.teamRecords.map(mapTeamRecordAPIEntityToTeam)
-    }
+    };
 }
 
 function mapGameAPIEntityToGame(entity: GameAPIEntity): Game {
@@ -64,7 +65,7 @@ function mapGameAPIEntityToGame(entity: GameAPIEntity): Game {
         homeTeamScore: entity.teams.home.score,
         awayTeamName: entity.teams.away.team.name,
         awayTeamScore: entity.teams.away.score
-    }
+    };
 };
 
 function mapScheduleAPIEntityToGames(entity: ScheduleAPIEntity): Game[] {

@@ -9,6 +9,6 @@ export class GetDivisionsUseCase {
     }
 
     async invoke(): Promise<Division[]> {
-        return this.repository.getDivisions();
+        return await this.repository.getDivisions();
     }
 }

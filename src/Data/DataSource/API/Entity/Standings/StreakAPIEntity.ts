@@ -1,6 +1,6 @@
 
 export interface StreakAPIEntity {
-    streakType: string;
-    streakNumber: number;
-    streakCode: string;
+    streakType: string
+    streakNumber: number
+    streakCode: string
 }
