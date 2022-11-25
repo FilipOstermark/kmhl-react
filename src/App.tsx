@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 import MainMenu from "./Presentation/MainMenu/MainMenu";
 import HighlightsView from "./Presentation/Highlights/HighlightsView";
 import StandingsView from "./Presentation/Standings/StandingsView";
@@ -8,7 +8,7 @@ import "./App.css";
 
 const App: React.FC<{}> = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Outlet />
 
             <Routes>
@@ -22,7 +22,7 @@ const App: React.FC<{}> = () => {
                 />
                 <Route path="*" element={<MainMenu />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 };
 
