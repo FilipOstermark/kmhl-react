@@ -12,17 +12,15 @@ const App: React.FC<{}> = () => {
             <Outlet />
 
             <Routes>
-                <Route path="/" element={<MainMenu />} />
                 <Route
                     path="/highlights"
                     element={<HighlightsView getGamesUseCase={getGamesUseCase} />}
                 />
                 <Route
                     path="/standings"
-                    element={
-                        <StandingsView getDivisionsUseCase={getDivisionsUseCase} />
-                    }
+                    element={<StandingsView getDivisionsUseCase={getDivisionsUseCase} />}
                 />
+                <Route path="*" element={<MainMenu />} />
             </Routes>
         </BrowserRouter>
     );
