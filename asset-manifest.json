@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "./static/css/main.77209175.css",
-    "main.js": "./static/js/main.fdf5240b.js",
+    "main.css": "./static/css/main.71b84c44.css",
+    "main.js": "./static/js/main.ea58a81b.js",
     "static/js/787.1d27ff4b.chunk.js": "./static/js/787.1d27ff4b.chunk.js",
     "static/media/KrinkesRegularPERSONAL.ttf": "./static/media/KrinkesRegularPERSONAL.57dfd7fbdea3bffa8188.ttf",
     "static/media/bg.jpg": "./static/media/bg.18e284df9b1a925422a2.jpg",
+    "static/media/Raleway-Regular.ttf": "./static/media/Raleway-Regular.a9338128bb2e46698401.ttf",
     "static/media/Raleway-Medium.ttf": "./static/media/Raleway-Medium.bde676ccd529227b132d.ttf",
     "static/media/Megabomb.ttf": "./static/media/Megabomb.dfefd4304eec471615a5.ttf",
     "static/media/nhllogo.svg": "./static/media/nhllogo.5bc5f82e4cd8e74f499fa9a01a2d8521.svg",
     "index.html": "./index.html",
-    "main.77209175.css.map": "./static/css/main.77209175.css.map",
-    "main.fdf5240b.js.map": "./static/js/main.fdf5240b.js.map",
+    "main.71b84c44.css.map": "./static/css/main.71b84c44.css.map",
+    "main.ea58a81b.js.map": "./static/js/main.ea58a81b.js.map",
     "787.1d27ff4b.chunk.js.map": "./static/js/787.1d27ff4b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.77209175.css",
-    "static/js/main.fdf5240b.js"
+    "static/css/main.71b84c44.css",
+    "static/js/main.ea58a81b.js"
   ]
 }
