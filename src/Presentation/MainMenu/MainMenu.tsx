@@ -9,13 +9,11 @@ const MainMenu: React.FC<{}> = () => {
             <div>
                 <Link className={ styles.Link } to="/highlights">Highlights</Link>
                 <hr />
-                <h2>2022</h2>
             </div>
             <NhlLogo id="NhlLogo" />
             <div>
                 <Link to="/standings">Standings</Link>
                 <hr></hr>
-                <h2>2023</h2>
             </div>
         </nav>
     );
