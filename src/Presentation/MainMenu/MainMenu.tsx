@@ -1,24 +1,23 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+import styles from "./MainMenu.module.css";
+import { ReactComponent as NhlLogo } from "../Assets/Images/nhllogo.svg";
 
 const MainMenu: React.FC<{}> = () => {
     return (
-        <Router>
-            <nav>
-                <ul>
-                    <li><Link to="/">Main menu</Link></li>
-                    <li>
-                        <Link to="/highlights">Highlights</Link>
-                    </li>
-                    <li>
-                        <Link to="/standings">Standings</Link>
-                    </li>
-                </ul>
-            </nav>
-        </Router>
+        <nav className={ styles.MainMenu } >
+            <div>
+                <Link className={ styles.Link } to="/highlights">Highlights</Link>
+                <hr />
+                <h2>2022</h2>
+            </div>
+            <NhlLogo id="NhlLogo" />
+            <div>
+                <Link to="/standings">Standings</Link>
+                <hr></hr>
+                <h2>2023</h2>
+            </div>
+        </nav>
     );
 };
 

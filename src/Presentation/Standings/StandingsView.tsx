@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { Division } from "../../Domain/Model/Division";
 import { GetDivisionsUseCase } from "../../Domain/UseCase/GetDivisions";
-import { useViewModel } from "./DivisionListViewModel";
+import { useViewModel } from "./StandingsViewModel";
 import DivisionView from "./DivisionView";
 
-interface DivisionListViewProps {
-    getDivisionUseCase: GetDivisionsUseCase
+interface StandingsViewProps {
+    getDivisionsUseCase: GetDivisionsUseCase
 }
 
-const DivisionListView: React.FC<DivisionListViewProps> = (
-    props: DivisionListViewProps
+const StandingsView: React.FC<StandingsViewProps> = (
+    props: StandingsViewProps
 ) => {
-    const { getDivisions, divisions } = useViewModel(props.getDivisionUseCase);
+    const { getDivisions, divisions } = useViewModel(props.getDivisionsUseCase);
 
     useEffect(() => {
         getDivisions().then(() => {}).catch(() => {});
@@ -26,4 +26,4 @@ const DivisionListView: React.FC<DivisionListViewProps> = (
     );
 };
 
-export default DivisionListView;
+export default StandingsView;

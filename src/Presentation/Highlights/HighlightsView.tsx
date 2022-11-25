@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { Game } from "../../Domain/Model/Game";
 import { GetGamesUseCase } from "../../Domain/UseCase/GetGames";
-import { useViewModel } from "./GameListViewModel";
+import { useViewModel } from "./HighlightsViewModel";
 import GameView from "./GameView";
 
-interface GamesListViewProps {
+interface HighlightsViewProps {
     getGamesUseCase: GetGamesUseCase
 }
 
-const GameListView: React.FC<GamesListViewProps> = (
-    props: GamesListViewProps
+const HighlightsView: React.FC<HighlightsViewProps> = (
+    props: HighlightsViewProps
 ) => {
     const { getGames, games } = useViewModel(props.getGamesUseCase);
 
@@ -34,4 +34,4 @@ const GameListView: React.FC<GamesListViewProps> = (
     );
 };
 
-export default GameListView;
+export default HighlightsView;

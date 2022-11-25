@@ -1,0 +1,41 @@
+@font-face {
+    font-family: megabomb;
+    src: url("../Assets/Fonts/Megabomb/Megabomb.ttf");
+}
+@font-face {
+    font-family: raleway;
+    src: url("../Assets/Fonts/Raleway/Raleway-Regular.ttf");
+}
+
+.MainMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: megabomb;
+    min-height: 85vh;
+}
+
+.MainMenu a {
+    font-size: 2rem;
+    font-weight: 200;
+    text-decoration: none;
+
+    color: #e4e5e6;
+}
+
+.MainMenu a:hover {
+    color: orange;
+}
+
+
+.MainMenu h2 {
+    margin: 0;
+    padding: 0;
+    font-family: raleway;
+}
+
+.MainMenu hr {
+    margin: 0;
+    color: #e4e5e6;
+}

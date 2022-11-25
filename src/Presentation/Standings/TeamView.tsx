@@ -13,8 +13,10 @@ function getWindowSize(): { innerWidth: number, innerHeight: number } {
 const TeamView: React.FC<TeamViewProps> = (props: TeamViewProps) => {
     const team = props.team;
     const { innerWidth } = getWindowSize();
+
+    // TODO Smarter handling - and use team.nameShort when required
     const shortWinWidth = 1000;
-    const teamName = innerWidth >= shortWinWidth ? team.name : team.nameShort;
+    const teamName = innerWidth >= shortWinWidth ? team.name : team.name;
 
     return (
         <tr className="TeamView">

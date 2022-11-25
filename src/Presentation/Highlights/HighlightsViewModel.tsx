@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Game } from "../../Domain/Model/Game";
 import { GetGamesUseCase } from "../../Domain/UseCase/GetGames";
 
-export default interface GameListViewModel {
+export default interface HighlightsViewModel {
     getGames: () => Promise<void>
     games: Game[]
 }
 
-export function useViewModel(getGamesUseCase: GetGamesUseCase): GameListViewModel {
+export function useViewModel(getGamesUseCase: GetGamesUseCase): HighlightsViewModel {
     const [games, setGames] = useState<Game[]>([]);
 
     async function getGames(): Promise<void> {
